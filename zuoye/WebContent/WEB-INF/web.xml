@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+id="WebApp_ID" version="3.1">
+
+<!--在xml里面配置的东西在servlet里面可以拿到  -->
+<context-param>
+	<param-name>user</param-name>
+	<param-value>admin</param-value>
+</context-param>
+<context-param>
+	<param-name>password</param-name>
+	<param-value>123456</param-value>
+</context-param>
+
+
+<servlet>
+	<servlet-name>ZuoYe</servlet-name>
+	<servlet-class>zuoye.ZuoYe</servlet-class>
+	
+<!-- 	<init-param> 在init里面获取
+		<param-name>user</param-name>
+		<param-value>admin</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>key</param-name>
+		<param-value>123456</param-value>
+	</init-param> -->
+	
+</servlet>
+
+<servlet-mapping>
+<servlet-name>ZuoYe</servlet-name>
+<url-pattern>/zuoye/homework</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
